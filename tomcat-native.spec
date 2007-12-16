@@ -4,7 +4,7 @@
 Summary:        Tomcat Native Java library
 Name:           tomcat-native
 Version:        1.1.10
-Release:        %mkrel 0.0.1
+Release:        %mkrel 0.0.2
 Epoch:          0
 License:        Apache License
 Group:          Development/Java
@@ -14,7 +14,7 @@ Source1:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/tomca
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  apr-devel >= 0:{version}
 BuildRequires:  java-devel >= 0:1.4.2
-BuildRequires:  jpackage-utils
+BuildRequires:  java-rpmbuild
 BuildRequires:  openssl-devel
 
 %description
