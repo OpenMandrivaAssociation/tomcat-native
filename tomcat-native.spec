@@ -11,7 +11,6 @@ Group:          Development/Java
 URL:            http://apr.apache.org/
 Source0:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/tomcat-native-%{version}-src.tar.gz
 Source1:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/tomcat-native-%{version}-src.tar.gz.asc
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  apr-devel >= 0:{version}
 BuildRequires:  java-devel >= 0:1.4.2
 BuildRequires:  java-rpmbuild
