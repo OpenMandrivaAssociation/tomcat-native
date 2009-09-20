@@ -4,7 +4,7 @@
 Summary:        Tomcat Native Java library
 Name:           tomcat-native
 Version:        1.1.16
-Release:        %mkrel 0.0.1
+Release:        %mkrel 0.0.2
 Epoch:          0
 License:        Apache License
 Group:          Development/Java
