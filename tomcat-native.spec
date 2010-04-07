@@ -3,14 +3,14 @@
 
 Summary:        Tomcat Native Java library
 Name:           tomcat-native
-Version:        1.1.16
-Release:        %mkrel 0.0.2
+Version:        1.1.20
+Release:        %mkrel 1
 Epoch:          0
 License:        Apache License
 Group:          Development/Java
-URL:            http://apr.apache.org/
-Source0:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/tomcat-native-%{version}-src.tar.gz
-Source1:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/tomcat-native-%{version}-src.tar.gz.asc
+URL:            http://tomcat.apache.org/
+Source0:	http://www.apache.org/dist/tomcat/tomcat-connectors/native/%{version}/source/%{name}-%{version}-src.tar.gz
+Source1:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/%{version}/source/%{name}-%{version}-src.tar.gz.asc
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  apr-devel >= 0:{version}
 BuildRequires:  java-devel >= 0:1.4.2
@@ -61,10 +61,6 @@ export JAVA_HOME=%{java_home}
 
 %if %mdkversion < 200900
 %post -n %{lib_name} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{lib_name} -p /sbin/ldconfig
 %endif
 
 %files -n %{lib_name}
