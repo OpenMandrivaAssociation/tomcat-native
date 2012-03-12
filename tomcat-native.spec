@@ -3,15 +3,14 @@
 
 Summary:        Tomcat Native Java library
 Name:           tomcat-native
-Version:        1.1.20
-Release:        %mkrel 2
+Version:        1.1.23
+Release:        1
 Epoch:          0
 License:        Apache License
 Group:          Development/Java
 URL:            http://tomcat.apache.org/
 Source0:	http://www.apache.org/dist/tomcat/tomcat-connectors/native/%{version}/source/%{name}-%{version}-src.tar.gz
 Source1:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/%{version}/source/%{name}-%{version}-src.tar.gz.asc
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  apr-devel >= 0:{version}
 BuildRequires:  java-devel >= 0:1.4.2
 BuildRequires:  java-rpmbuild
@@ -53,25 +52,13 @@ export JAVA_HOME=%{java_home}
 %make
 
 %install
-%{__rm} -rf %{buildroot}
 %makeinstall
 
-%clean
-%{__rm} -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post -n %{lib_name} -p /sbin/ldconfig
-%endif
-
 %files -n %{lib_name}
-%defattr(-,root,root,-)
 %doc ../../KEYS ../../LICENSE ../../NOTICE BUILDING
 %{_libdir}/libtcnative-%{tcnver}.so.*
 
 %files -n %{lib_name}-devel
-%defattr(-,root,root,-)
 %{_libdir}/libtcnative-%{tcnver}.*a
 %{_libdir}/libtcnative-%{tcnver}.so
 %{_libdir}/pkgconfig/tcnative-%{tcnver}.pc
-
-
