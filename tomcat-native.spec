@@ -3,7 +3,7 @@
 
 Summary:        Tomcat Native Java library
 Name:           tomcat-native
-Version:        1.1.23
+Version:        1.1.24
 Release:        1
 Epoch:          0
 License:        Apache License
@@ -59,6 +59,5 @@ export JAVA_HOME=%{java_home}
 %{_libdir}/libtcnative-%{tcnver}.so.*
 
 %files -n %{lib_name}-devel
-%{_libdir}/libtcnative-%{tcnver}.*a
 %{_libdir}/libtcnative-%{tcnver}.so
 %{_libdir}/pkgconfig/tcnative-%{tcnver}.pc
