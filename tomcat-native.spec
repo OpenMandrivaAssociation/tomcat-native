@@ -4,7 +4,7 @@
 Summary:        Tomcat Native Java library
 Name:           tomcat-native
 Version:        1.1.24
-Release:        1
+Release:        2
 Epoch:          0
 License:        Apache License
 Group:          Development/Java
