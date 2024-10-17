@@ -8,7 +8,7 @@ Release:        2
 Epoch:          0
 License:        Apache License
 Group:          Development/Java
-URL:            http://tomcat.apache.org/
+URL:            https://tomcat.apache.org/
 Source0:	http://www.apache.org/dist/tomcat/tomcat-connectors/native/%{version}/source/%{name}-%{version}-src.tar.gz
 Source1:        http://www.apache.org/dist/tomcat/tomcat-connectors/native/%{version}/source/%{name}-%{version}-src.tar.gz.asc
 BuildRequires:  apr-devel >= 0:{version}
